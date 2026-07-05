@@ -8,7 +8,7 @@ from sklearn import linear_model
 st.set_page_config(page_title="Canada Income Predictor", layout="centered")
 
 # App Header
-st.title("🇨🇦 Canada's Capital Yearwise Income Prediction")
+st.title("Canada's Capital Yearwise Income Prediction")
 st.write("This app uses a simple **Linear Regression** model to predict Canada's per capita income based on historical data.")
 
 # ==========================================
