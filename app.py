@@ -8,7 +8,7 @@ from sklearn import linear_model
 st.set_page_config(page_title="Canada Income Predictor", layout="centered")
 
 # App Header
-st.title("Canada's Capital Yearwise Income Prediction")
+st.title("🇨🇦 Canada's Capital Yearwise Income Prediction")
 st.write("This app uses a simple **Linear Regression** model to predict Canada's per capita income based on historical data.")
 
 # ==========================================
@@ -37,7 +37,7 @@ reg.fit(X, y)
 # 3. Interactive User Input & Prediction
 # ==========================================
 st.subheader("🔮 Make a Prediction")
-# Add a slider/input for the user to select the year
+# Add an input for the user to select the year
 target_year = st.number_input("Enter or select a year to predict:", min_value=1970, max_value=2050, value=2020, step=1)
 
 # Predict the income
@@ -81,31 +81,22 @@ ax.legend(fontsize=11)
 st.pyplot(fig)
 
 # ==============================
-# Sidebar Branding
+# Main Page Bottom Footer Branding
 # ==============================
-
 st.markdown("---")
 
+# Using pure HTML inside markdown to ensure perfect centering and layout execution
 st.markdown("""
-<div style='text-align:center;'>
-
-### 🚀 Developed by <span style="color:#4CAF50;">ABHAY KUMAR GUPTA</span>
-
-<a href="https://github.com/Abhay-cody" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
-</a>
-
-&nbsp;
-
-<a href="https://www.linkedin.com/in/abhay-kumar-gupta-104a18397" target="_blank">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
-
-<br><br>
-
-⭐ Thank you for visiting this Machine Learning Project.
-
-</div>
-""", unsafe_allow_html=True)
+<div style='text-align: center; margin-top: 30px; padding-bottom: 20px;'>
+    <h3 style='margin-bottom: 15px;'>🚀 Developed by <span style="color:#4CAF50;">ABHAY KUMAR GUPTA</span></h3>
+    <div style='display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;'>
+        <a href="https://github.com/Abhay-cody" target="_blank">
+            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/abhay-kumar-gupta-104a18397" target="_blank">
+            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+        </a>
+    </div>
+    <p style='color: #888888; font-size: 14px;'>⭐ Thank you for visiting this Machine Learning Project.</p>
 </div>
 """, unsafe_allow_html=True)
