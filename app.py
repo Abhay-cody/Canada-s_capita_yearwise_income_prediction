@@ -8,7 +8,7 @@ from sklearn import linear_model
 st.set_page_config(page_title="Canada Income Predictor", layout="centered")
 
 # App Header
-st.title("🇨🇦 Canada's Capital Yearwise Income Prediction")
+st.title("Canada's Capital Yearwise Income Prediction")
 st.write("This app uses a simple **Linear Regression** model to predict Canada's per capita income based on historical data.")
 
 # ==========================================
@@ -80,30 +80,32 @@ ax.legend(fontsize=11)
 # Pass the matplotlib figure to streamlit
 st.pyplot(fig)
 
-# ==========================================
-# Sidebar Branding (Fixed & Cleaned)
-# ==========================================
-st.sidebar.markdown("""
-<div style='text-align:center; padding-top: 20px;'>
+# ==============================
+# Sidebar Branding
+# ==============================
 
-### 🚀 Developed by <br><span style="color:#4CAF50; font-size:20px; font-weight:bold;">ABHAY KUMAR GUPTA</span>
+st.markdown("---")
 
-<br>
+st.markdown("""
+<div style='text-align:center;'>
+
+### 🚀 Developed by <span style="color:#4CAF50;">ABHAY KUMAR GUPTA</span>
 
 <a href="https://github.com/Abhay-cody" target="_blank">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" width="130">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
 </a>
 
-<br><br>
+&nbsp;
 
 <a href="https://www.linkedin.com/in/abhay-kumar-gupta-104a18397" target="_blank">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" width="130">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
 
 <br><br>
-<hr>
 
 ⭐ Thank you for visiting this Machine Learning Project.
 
+</div>
+""", unsafe_allow_html=True)
 </div>
 """, unsafe_allow_html=True)
