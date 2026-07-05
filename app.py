@@ -127,8 +127,6 @@ plt.ylabel('Per Capita Income (US$)')
 plt.scatter(df['year'], df['per capita income (US$)'], color='red', marker='+')
 plt.show()
 
-"""#Prepare the Data & Train the Model"""
-
 # X must be a 2D array/dataframe
 X = df[['year']]
 
@@ -141,21 +139,15 @@ reg = linear_model.LinearRegression()
 # Train the model using the training sets
 reg.fit(X, y)
 
-"""#Make the Prediction"""
-
 # Predict the income for the year 2020
 predicted_income = reg.predict([[2020]])
 print(f"Predicted per capita income for 2020: {predicted_income[0]}")
-
-"""#Double-Checking the Math"""
 
 # Show the slope (m)
 print("Coefficient (m):", reg.coef_)
 
 # Show the intercept (b)
 print("Intercept (b):", reg.intercept_)
-
-"""#Plotting the Regression line"""
 
 # Plotting the regression line
 plt.plot(df['year'], reg.predict(df[['year']]), color='blue', label='Regression Line')
