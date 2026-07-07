@@ -80,23 +80,40 @@ ax.legend(fontsize=11)
 # Pass the matplotlib figure to streamlit
 st.pyplot(fig)
 
-# ==============================
-# Main Page Bottom Footer Branding
-# ==============================
-st.markdown("---")
+# ==========================================
+# 👨‍💻 Developer Profile
+# ==========================================
 
-# Using pure HTML inside markdown to ensure perfect centering and layout execution
-st.markdown("""
-<div style='text-align: center; margin-top: 30px; padding-bottom: 20px;'>
-    <h3 style='margin-bottom: 15px;'>🚀 Developed by <span style="color:#4CAF50;">ABHAY KUMAR GUPTA</span></h3>
-    <div style='display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;'>
-        <a href="https://github.com/Abhay-cody" target="_blank">
-            <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/abhay-kumar-gupta-104a18397" target="_blank">
-            <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-        </a>
-    </div>
-    <p style='color: #888888; font-size: 14px;'>⭐ Thank you for visiting this Machine Learning Project.</p>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("## 👨‍💻 Developer")
+
+col1, col2 = st.columns([1, 3])
+
+with col1:
+    st.image(
+        "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
+        width=120
+    )
+
+with col2:
+    st.markdown("### **ABHAY KUMAR GUPTA**")
+    st.markdown("**Machine Learning | Data Science | Python Developer**")
+
+st.markdown("### 🔗 Connect With Me")
+
+c1, c2 = st.columns(2)
+
+with c1:
+    st.link_button(
+        "🐙 GitHub Profile",
+        "https://github.com/Abhay-cody"
+    )
+
+with c2:
+    st.link_button(
+        "💼 LinkedIn Profile",
+        "https://www.linkedin.com/in/abhay-kumar-gupta-104a18397"
+    )
+
+st.markdown("---")
+st.caption("© 2026 Abhay Kumar Gupta | Built with ❤️ using Streamlit & Scikit-Learn")
