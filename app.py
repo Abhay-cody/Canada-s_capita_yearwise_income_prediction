@@ -92,7 +92,7 @@ col1, col2 = st.columns([1, 3])
 with col1:
     st.image(
         "https://avatars.githubusercontent.com/u/9919?s=200&v=4",
-        width=120
+        width=50
     )
 
 with col2:
